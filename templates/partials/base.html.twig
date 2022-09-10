@@ -1,0 +1,29 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="{{ page.url(true, true) }}">
+    <title>{% block title %}{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}{% endblock %}</title>
+    <link rel="canonical" href="{{ page.url(true, true) }}">
+
+    {% block stylesheets %}
+    {% endblock %}
+
+    {{ assets.css() | raw }}
+
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon-16x16.png') }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon-32x32.png') }}" sizes="32x32">
+  </head>
+
+  <body>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    {{ assets.js() | raw }}
+    
+  </body>
+</html>

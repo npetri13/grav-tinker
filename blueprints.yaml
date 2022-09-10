@@ -1,0 +1,18 @@
+name: Grav Tinker
+slug: grav-tinker
+type: theme
+version: 0.0.1
+description: Simple 
+icon: microchip
+author:
+  name: Nico Petri
+  email: nicopetri@example.com
+homepage: 
+demo: 
+keywords: grav, theme, minimum
+bugs: 
+readme: 
+license: MIT
+
+dependencies:
+  - { name: grav, version: ">=1.6.0" }

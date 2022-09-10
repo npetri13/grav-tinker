@@ -1,0 +1,25 @@
+title: Default
+extends@:
+    type: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.media_order:
+              ordering@: 99
+            
+            header.title:
+              ordering@: -99
+
+            header.subTitle:
+              ordering@: header.title
+              type: text
+              style: vertical
+              label: Subtitle
+              description: "Enter a subtitle for your page."

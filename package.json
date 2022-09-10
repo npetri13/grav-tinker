@@ -1,0 +1,12 @@
+{
+  "name": "grav-tinker",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "live": "cd ../../.. && bin/grav server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

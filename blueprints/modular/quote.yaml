@@ -1,0 +1,29 @@
+title: Quote
+extends@:
+    type: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.title:
+              unset@: true
+            header.media_order:
+              unset@: true
+
+            header.quoteTitle:
+              ordering@: -99
+              type: text
+              label: Quote Title
+              description: "Enter a title for your quote."
+            
+            header.quote:
+              ordering@: header.quoteTitle
+              type: markdown
+              label: Quote
+              description: "Enter the quote itself."              
