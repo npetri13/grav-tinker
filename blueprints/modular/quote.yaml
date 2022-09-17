@@ -11,8 +11,6 @@ form:
       fields:
         content:
           fields:
-            header.media_order:
-              unset@: true
             header.title:
               unset@: true
             header.subTitle:
@@ -26,8 +24,15 @@ form:
               label: Quote Title
               description: "Enter a title for your quote."
             
-            header.quote:
+            header.bgImage:
               ordering@: header.quoteTitle
+              type: filepicker
+              size: large
+              label: Background Image
+              help: This image will be used as background.
+            
+            header.quote:
+              ordering@: header.bgImage
               type: markdown
               label: Quote
-              description: "Enter the quote itself."              
+              description: "Enter the quote itself."
